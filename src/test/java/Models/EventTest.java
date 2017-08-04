@@ -16,5 +16,15 @@ public class EventTest {
         Event testEvent = new Event(testGuests, testDinnerMenu, testLibations, testEntertainment);
         assertEquals(1, testEvent.getGuests());
     }
+    @Test
+    public void newGuest_returnDinnerChoice() throws Exception {
+        int testGuests = 1;
+        List<String> testDinnerMenu = new ArrayList<>();
+        testDinnerMenu.add("mezza sampler");
+        List<String> testLibations = new ArrayList<>();
+        List<String> testEntertainment = new ArrayList<>();
+        Event testEvent = new Event(testGuests, testDinnerMenu, testLibations, testEntertainment);
+        assertEquals(testDinnerMenu, testEvent.getDinnerMenu());
+    }
 
 }
