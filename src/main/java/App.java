@@ -20,10 +20,7 @@ public class App {
         List<String> userEntertainment = new ArrayList<>();
         String userInput;
 
-        //Event newEvent = new Event(int Guests, List<> food, bev, party);
-
-
-
+        
 //        try {
             while (programRunning) {
                 System.out.println("Welcome to Entertainment Excellence Event Estimator" + " You may type '0' to exit. " +
@@ -34,7 +31,8 @@ public class App {
                     programRunning = false;
                 } else {
                     //
-                    System.out.println("Which courses will your guests be having, 'mezza', 'shawarma', 'dessert'");
+                    System.out.println("Which courses will your guests be having, 'mezza', 'shawarma', 'dessert'. Please enter one at a time");
+
                     userInput = bufferedReader.readLine();
                 }
                     if (userInput.equals("q")) {
@@ -62,7 +60,14 @@ public class App {
 
 
                 System.out.println("Your estimated cost is $" + userEvent.giveEstimate());
-
+                System.out.println("Is your party for your 'nonprofit' or are you a 'student'");
+                userInput = bufferedReader.readLine();
+                if (userInput.equals("nonprofit")) {
+                    System.out.println("Your new estimate is " + userEvent.nonProfit());
+                } else if (userInput.equals("student")) {
+                    System.out.println("Your new estimate is " + userEvent.student());
+                } else
+                    programRunning = false;
             }
 //        }
 //        catch (IOException e) {
