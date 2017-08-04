@@ -4,36 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Event {
-    private int Guests = 0;
-    private List<String> DinnerMenu = new ArrayList<>();
-    private List<String> Libations = new ArrayList<>();
-    private List<String> Entertainment = new ArrayList<>();
+    private int mGuests = 0;
+    private List<String> mDinnerMenu = new ArrayList<>();
+    private List<String> mLibations = new ArrayList<>();
+    private List<String> mEntertainment = new ArrayList<>();
 
 
     public Event(int Guests, List<String> DinnerMenu, List<String> Libations, List<String> Entertainment){
-        this.Guests = Guests;
-        this.DinnerMenu = DinnerMenu;
-        this.Libations = Libations;
-        this.Entertainment = Entertainment;
+        mGuests = Guests;
+        mDinnerMenu.addAll(mDinnerMenu);
+        mLibations.addAll(mLibations);
+        mEntertainment.addAll(mEntertainment);
     }
 
     public int getGuests() {
-        return Guests;
+        return mGuests;
     }
 
     public List<String> getDinnerMenu() {
-        return DinnerMenu;
+        return mDinnerMenu;
     }
 
     public List<String> getLibations() {
-        return Libations;
+        return mLibations;
     }
 
     public List<String> getEntertainment() {
-        return Entertainment;
+        return mEntertainment;
     }
 
-    public static void giveEstimate(){
+    public double giveEstimate(){
+
         //create price based on event input
 
     }
