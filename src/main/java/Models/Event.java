@@ -10,11 +10,11 @@ public class Event {
     private List<String> mEntertainment = new ArrayList<>();
 
 
-    public Event(int Guests, List<String> DinnerMenu, List<String> Libations, List<String> Entertainment){
+    public Event(int Guests, List<String> food, List<String> bev, List<String> party){
         mGuests = Guests;
-        mDinnerMenu.addAll(mDinnerMenu);
-        mLibations.addAll(mLibations);
-        mEntertainment.addAll(mEntertainment);
+        mDinnerMenu.addAll(food);
+        mLibations.addAll(bev);
+        mEntertainment.addAll(party);
     }
 
     public int getGuests() {
@@ -34,8 +34,12 @@ public class Event {
     }
 
     public double giveEstimate(){
+        double priceDinnerMenu = mGuests * 9.99 * mDinnerMenu.size();
+        double priceLibations = mGuests * 12.99 * mLibations.size();
+        double priceEntertainment = 200 * mEntertainment.size();
 
-        //create price based on event input
+        double totalCost = priceDinnerMenu + priceEntertainment + priceLibations;
 
+        return totalCost;
     }
 }

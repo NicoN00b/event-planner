@@ -49,6 +49,20 @@ public class EventTest {
         Event testEvent = new Event(testGuests, testDinnerMenu, testLibations, testEntertainment);
         assertEquals(testEntertainment, testEvent.getEntertainment());
     }
+    //This test or code preceeding it broke everything :(
+    @Test
+    public void newCost_giveEstimate() throws Exception {
+        int testGuests = 1;
+        List<String> testDinnerMenu = new ArrayList<>();
+        testDinnerMenu.add("mezza sampler");
+        List<String> testLibations = new ArrayList<>();
+        testLibations.add("Spirits Bar");
+        List<String> testEntertainment = new ArrayList<>();
+        testEntertainment.add("String Quartet");
+        Event testEvent = new Event(testGuests, testDinnerMenu, testLibations, testEntertainment);
+        double expected = 222.98;
+        assertEquals(true, testEvent.giveEstimate());
+    }
 
 
 
