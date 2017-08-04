@@ -20,7 +20,7 @@ public class App {
         List<String> userEntertainment = new ArrayList<>();
         String userInput;
 
-        
+
 //        try {
             while (programRunning) {
                 System.out.println("Welcome to Entertainment Excellence Event Estimator" + " You may type '0' to exit. " +
